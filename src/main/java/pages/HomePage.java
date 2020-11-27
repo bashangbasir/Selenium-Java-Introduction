@@ -50,6 +50,16 @@ public class HomePage {
         return new UploadFilePage(driver);
     }
 
+    public EntryAdPage clickEntryAd(){
+        clickLink("Entry Ad");
+        return new EntryAdPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenuPage(){
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
